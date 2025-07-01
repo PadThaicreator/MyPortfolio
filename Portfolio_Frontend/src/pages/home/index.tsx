@@ -5,18 +5,22 @@ import { SkillSection } from "./components/skillSection";
 
 export default function Home() {
   return (
-    <div className=" flex flex-col gap-10">
-      <section id="home" className="section">
+    <div className="grid grid-cols-2 gap-10">
+      <section id="home" className="section col-span-2">
         <HomeSection />
       </section>
 
       <section id="about" className="section">
         <AboutMePage />
       </section>
-      <section id="ed" className="section">
-        <EducationSection />
+      <div></div>
+      
+      <section id="ed" className="section flex col-span-2 justify-end">
+        
+          <EducationSection />
+        
       </section>
-      <section id="skill" className="section">
+      <section id="skill" className="section col-span-2">
         <SkillSection />
       </section>
       <section id="exp" className="section">

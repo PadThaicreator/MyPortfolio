@@ -3,9 +3,8 @@
 
 #root {
   display: flex;
- 
   flex-direction: column;
-  background-color: #FFF2E0;
+  background-color: #F4EBD3;
   height: fit-content ;
   
 }
@@ -50,7 +49,7 @@ section {
 }
 
 .opening {
-  position: relative; /* หรือตั้งเป็น absolute ตาม layout */
+  position: relative; 
   animation: comein 3s ease forwards;
 }
 
@@ -61,7 +60,7 @@ section {
   }
   50% {
     left: 0rem;
-    transform: rotate(30deg);
+    transform: rotate(15deg);
   }
   100% {
     left: 0rem;
@@ -69,9 +68,24 @@ section {
   }
 }
 
+
+
 .card-section {
-  @apply flex flex-col p-4 rounded-lg  hover:shadow-lg duration-300 bg-white hover:text-blue-400 hover:font-semibold
+  @apply flex flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-blue-400 hover:font-semibold;
+  animation: card-animate 3s ease-in-out ;
+  transform-origin: left center; 
 }
+
+@keyframes card-animate {
+  0% {
+    transform: scaleX(0); 
+  }
+  100% {
+    transform: scaleX(1); 
+  }
+}
+
+
 
 /* 
 .logo {

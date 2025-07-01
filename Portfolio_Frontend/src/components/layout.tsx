@@ -3,8 +3,8 @@ import { Outlet, Link } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <div className='flex flex-1 gap-10 flex-col'>
-      <nav className='flex  flex-1 gap-2 shadow-lg rounded-b-2xl bg-purple-400 p-4 w-screen top-0 sticky z-10 text-white'>
+    <div className='flex flex-1  flex-col'>
+      <nav className='flex  flex-1 gap-2 shadow-lg rounded-b-2xl bg-[#555879] p-4 w-screen top-0 sticky z-10 text-white'>
        
         <a href="#home" >Home</a>
         <a href="#about" >About Me</a>
