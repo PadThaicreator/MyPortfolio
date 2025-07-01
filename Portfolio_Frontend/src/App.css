@@ -2,12 +2,78 @@
 
 
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  display: flex;
+ 
+  flex-direction: column;
+  background-color: #FFF2E0;
+  height: fit-content ;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+section {
+  scroll-margin-top: 80px; 
+  
 }
 
+.rainbow-text {
+  font-size: 3rem;
+  font-weight: bold;
+  background: linear-gradient(270deg, 
+    #ff0000, #ff9900, #33cc33, #3399ff, #cc33ff, #ff0000);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 6s ease infinite;
+
+}
+
+.winky-sans {
+  font-family: "Winky Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: oblique;
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.opening {
+  position: relative; /* หรือตั้งเป็น absolute ตาม layout */
+  animation: comein 3s ease forwards;
+}
+
+@keyframes comein {
+  0% {
+    left: -100rem;
+    transform: rotate(0deg);
+  }
+  50% {
+    left: 0rem;
+    transform: rotate(30deg);
+  }
+  100% {
+    left: 0rem;
+    transform: rotate(0deg);
+  }
+}
+
+.card-section {
+  @apply flex flex-col p-4 rounded-lg  hover:shadow-lg duration-300 bg-white hover:text-blue-400 hover:font-semibold
+}
+
+/* 
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -42,4 +108,4 @@
 
 .read-the-docs {
   color: #888;
-}
+} */

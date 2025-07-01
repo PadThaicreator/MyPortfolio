@@ -3,10 +3,15 @@ import { Outlet, Link } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <div>
-      <nav style={{ padding: '10px', background: '#eee' }}>
-        <Link to="/" style={{ marginRight: '10px' }}>Home</Link>
-        <Link to="/portfolio">Portfolio</Link>
+    <div className='flex flex-1 gap-10 flex-col'>
+      <nav className='flex  flex-1 gap-2 shadow-lg rounded-b-2xl bg-purple-400 p-4 w-screen top-0 sticky z-10 text-white'>
+       
+        <a href="#home" >Home</a>
+        <a href="#about" >About Me</a>
+        <a href="#ed" >Education</a>
+        <a href="#skill" >Skill</a>
+        <a href="#exp">Experience</a>
+        <a href="#contact">Contact</a>
       </nav>
 
       <main style={{ padding: '20px' }}>
