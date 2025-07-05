@@ -21,7 +21,7 @@ const education = [
 
 export const EducationSection = () => {
   return (
-    <div className="card-section">
+    <div className="card-section-right">
       <div>Education</div>
 
       <div className="text-black font-normal flex flex-col gap-3 p-2">

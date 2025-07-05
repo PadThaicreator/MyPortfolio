@@ -4,7 +4,7 @@
 export const SkillSection = () => {
 
     return(
-        <div className="card-section ">
+        <div className="card-section-left ">
             <div>My Skill</div>
             <div className="text-black font-normal grid grid-cols-4 p-4">
                 <div>

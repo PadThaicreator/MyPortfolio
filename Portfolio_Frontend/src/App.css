@@ -70,11 +70,19 @@ section {
 
 
 
-.card-section {
+.card-section-left {
   @apply flex flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-blue-400 hover:font-semibold;
   animation: card-animate 3s ease-in-out ;
   transform-origin: left center; 
 }
+
+
+.card-section-right {
+  @apply flex flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-blue-400 hover:font-semibold;
+  animation: card-animate 3s ease-in-out ;
+  transform-origin: right center; 
+}
+
 
 @keyframes card-animate {
   0% {
@@ -83,6 +91,12 @@ section {
   100% {
     transform: scaleX(1); 
   }
+}
+
+
+
+.selectNav {
+  @apply  bg-red-300  rounded-lg opacity-75;
 }
 
 
