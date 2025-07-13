@@ -4,8 +4,8 @@
 export const SkillSection = () => {
 
     return(
-        <div className="card-section-left ">
-            <div>My Skill</div>
+        <fieldset className="card-section border "> 
+            <legend className="text-2xl font-semibold">My Skill</legend>
             <div className="text-black font-normal grid grid-cols-4 p-4">
                 <div>
                     Languages  
@@ -35,16 +35,16 @@ export const SkillSection = () => {
                     Framework
                 </div>
                 <div className="col-span-3">
-                    Laravel, React, React Native, Next.js, Express.js, Tailwind
+                    Laravel, React, React Native, Next.js, Express.js, TailwindCSS
                 </div>
                 <div>
                     Tool
                 </div>
                 <div className="col-span-3">
-                    Node.js, Vite.js, Figma, Socket.IO, Git Control Version, Github, Prisma, Mongoose
+                    Node.js, Vite.js, Figma,  Git, Github
                 </div>
             </div>
-            <div className="flex gap-4 items-center justify-center mt-3">
+            <div className="flex flex-wrap gap-4 items-center justify-center mt-3">
                 <img src="../../../../public/vite.svg" alt=""  className="w-8 h-8"/>
                 <img src="../../../../public/react.svg" alt="" className="w-8 h-8" />
                 <img src="../../../../public/laravel-svgrepo-com.svg" alt=""  className="w-8 h-8" />
@@ -55,6 +55,6 @@ export const SkillSection = () => {
                 <img src="../../../../public/git-svgrepo-com.svg" alt=""  className="w-8 h-8" />
                 <img src="../../../../public/github-142-svgrepo-com.svg" alt=""  className="w-8 h-8" />
             </div>
-        </div>
+        </fieldset>
     );
 }

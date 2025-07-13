@@ -2,7 +2,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout';
 import Home from './pages/home';
-import Portfolio from './pages/Portfolio';
+
 import './App.css'
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} /> {/* http://localhost:5173/ */}
-          <Route path="portfolio" element={<Portfolio />} /> {/* http://localhost:5173/about */}
+          <Route index element={<Home />} />
+          {/* <Route path="portfolio" element={<Portfolio />} />  */}
         </Route>
       </Routes>
     </BrowserRouter>

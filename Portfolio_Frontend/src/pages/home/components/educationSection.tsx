@@ -21,10 +21,10 @@ const education = [
 
 export const EducationSection = () => {
   return (
-    <div className="card-section-right">
-      <div>Education</div>
+    <fieldset className="card-section border">
+      <legend className="ml-auto text-2xl font-semibold">Education</legend>
 
-      <div className="text-black font-normal flex flex-col gap-3 p-2">
+      <div className="text-black font-normal flex flex-col gap-3 p-2 flex-wrap">
         {education.map((item) => (
           <div key={item.id} className="grid grid-cols-4 border p-5 rounded-2xl hover:shadow-lg duration-300 border-gray-200">
             <div>
@@ -45,6 +45,6 @@ export const EducationSection = () => {
           </div>
         ))}
       </div>
-    </div>
+    </fieldset>
   );
 };

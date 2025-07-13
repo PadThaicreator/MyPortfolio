@@ -1,19 +1,28 @@
-// server.js หรือ index.js
-import express from 'express'
+
+import express , {Request , Response} from 'express'
 import mongoose from 'mongoose'
+import dotenv from 'dotenv'
+import projectRoute from './routes/project.route'
+import mailRouter from './routes/email.route'
+import cors from 'cors';
 
-const app = express()
+const app = express();
 
-// ตัวอย่าง URL ของ MongoDB (เช่น MongoDB Atlas หรือ Local)
-const mongoURI = 'mongodb://localhost:27017/mydatabase' // เปลี่ยนชื่อ mydatabase ตามต้องการ
+dotenv.config();
+app.use(express.json());
+app.use(cors());
 
-// ฟังก์ชันเชื่อมต่อ MongoDB
 const connectDB = async () => {
   try {
-    await mongoose.connect(mongoURI)
-    console.log('✅ MongoDB connected')
+
+    if(!process.env.MONGO_URI){
+        throw new Error('MONGO_URI is not defined in .env');
+    }
+
+    await mongoose.connect(process.env.MONGO_URI)
+    console.log('MongoDB connected')
   } catch (err) {
-    console.error('❌ MongoDB connection error:', err)
+    console.error('MongoDB connection error:', err)
     process.exit(1)
   }
 }
@@ -21,9 +30,12 @@ const connectDB = async () => {
 
 connectDB()
 
-app.get('/', (req, res) => {
+app.get('/', (req : Request, res : Response) => {
   res.send('Hello from Express + MongoDB!')
 })
+
+app.use('/project' , projectRoute)
+app.use('/mail' , mailRouter)
 
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`))
