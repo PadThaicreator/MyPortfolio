@@ -17,22 +17,22 @@ export const HomeSection = () => {
           </div>
           <div className="flex gap-4">
             <img
-              src="../../../../public/cat-4-svgrepo-com.svg"
+              src="/cat-4-svgrepo-com.svg"
               alt=""
               className="w-8 h-8"
             />
             <img
-              src="../../../../public/dog-5-svgrepo-com.svg"
+              src="/dog-5-svgrepo-com.svg"
               alt=""
               className="w-8 h-8"
             />
             <img
-              src="../../../../public/man-svgrepo-com.svg"
+              src="/man-svgrepo-com.svg"
               alt=""
               className="w-8 h-8"
             />
             <img
-              src="../../../../public/coding-svgrepo-com.svg"
+              src="/coding-svgrepo-com.svg"
               alt=""
               className="w-8 h-8"
             />
