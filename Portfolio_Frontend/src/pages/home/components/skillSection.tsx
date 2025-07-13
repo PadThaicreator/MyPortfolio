@@ -45,15 +45,15 @@ export const SkillSection = () => {
                 </div>
             </div>
             <div className="flex flex-wrap gap-4 items-center justify-center mt-3">
-                <img src="../../../../public/vite.svg" alt=""  className="w-8 h-8"/>
-                <img src="../../../../public/react.svg" alt="" className="w-8 h-8" />
-                <img src="../../../../public/laravel-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/nextjs-fill-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/nodejs-icon-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/mysql-logo-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/mongodb-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/git-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="../../../../public/github-142-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/vite.svg" alt=""  className="w-8 h-8"/>
+                <img src="/react.svg" alt="" className="w-8 h-8" />
+                <img src="/laravel-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/nextjs-fill-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/nodejs-icon-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/mysql-logo-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/mongodb-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/git-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                <img src="/github-142-svgrepo-com.svg" alt=""  className="w-8 h-8" />
             </div>
         </fieldset>
     );
