@@ -22,6 +22,7 @@ export const MailController = {
         to: process.env.EMAIL_USER, 
         subject: subject,
         text: message,
+        replyTo: email
       };
 
        console.log(email)
