@@ -16,7 +16,7 @@ export const MailController = {
           pass: process.env.EMAIL_PASS, 
         },
       });
-
+     
       const mailOptions = {
         from: email,
         to: process.env.EMAIL_USER, 
@@ -24,13 +24,8 @@ export const MailController = {
         text: message,
       };
 
-      transporter.verify((error, success) => {
-  if (error) {
-    console.error("❌ Error:", error);
-  } else {
-    console.log("✅ Ready to send mail");
-  }
-});
+       console.log(email)
+       console.log(mailOptions)
 
       await transporter.sendMail(mailOptions);
 
