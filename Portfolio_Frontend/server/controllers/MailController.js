@@ -23,6 +23,15 @@ export const MailController = {
         subject: subject,
         text: message,
       };
+
+      transporter.verify((error, success) => {
+  if (error) {
+    console.error("❌ Error:", error);
+  } else {
+    console.log("✅ Ready to send mail");
+  }
+});
+
       await transporter.sendMail(mailOptions);
 
      
