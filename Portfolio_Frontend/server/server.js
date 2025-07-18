@@ -10,7 +10,12 @@ const app = express();
 
 dotenv.config();
 app.use(express.json());
-app.use(cors());
+app.use({
+  cors: {
+    origin: "*",
+    methods: ["GET", "POST"],
+  },
+});
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

@@ -7,6 +7,7 @@ export const ContactSection = () => {
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
   const [isSubmit , setIsSubmit] = useState<boolean>(false);
+  const apiUrl = import.meta.env.VITE_API_URL;
 
   const handleSendEmail = async () => {
     if (!subject || !email || !message) {
@@ -19,7 +20,7 @@ export const ContactSection = () => {
       message: message,
     };
 
-    const res = await axios.post("http://localhost:3000/mail/contactMe", payload);
+    const res = await axios.post(`${apiUrl}/mail/contactMe`, payload);
     if(res){
       setIsSubmit(false)
     }

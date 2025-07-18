@@ -7,9 +7,9 @@ const Layout = () => {
   const [isSelected, setSelected] = useState<string>("");
 
   return (
-    <div className="grid md:grid-cols-2 sm:grid-cols-1 md:bg-blue-400   ">
+    <div className="grid md:grid-cols-2 sm:grid-cols-1 md:bg-blue-400    ">
       <div>
-        <nav className="flex   flex-col items-center justify-center gap-10  p-4 h-screen top-0 sticky z-10 text-white">
+        <nav className="flex flex-1   flex-col items-center justify-center gap-10  p-4 h-screen top-0 sticky z-10 text-white">
           <HomeSection />
 
           <div className="flex gap-4">
@@ -69,7 +69,7 @@ const Layout = () => {
         </nav>
       </div>
 
-      <main style={{ padding: "20px" }} className="flex flex-1 flex-col z-50">
+      <main  className="flex flex-1 flex-wrap border flex-col z-50 p-4">
         <Outlet />
       </main>
     </div>

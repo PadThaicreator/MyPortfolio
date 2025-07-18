@@ -1,6 +1,6 @@
 export const HomeSection = () => {
   return (
-    <div className=" flex items-center justify-center mt-2 z-50">
+    <div className=" flex items-center justify-center mt-2 z-50 ">
       <div>
         <div className="justify-center items-center flex flex-col gap-2  winky-sans">
           <div className=" justify-center  flex flex-col  rainbow-text ">

@@ -1,12 +1,14 @@
 @import "tailwindcss";
 
 #root {
-  /* display: flex;
-  flex-direction: column; */
+   display: flex;
+   flex : 1;
+  flex-direction: column;
   background: linear-gradient(-45deg, #cd4ff0, #e399f7, #c920f8, #cd4ff0);
   background-size: 400% 400%;
   animation: gradientMove 10s ease infinite;
   height: fit-content;
+  
 }
 
 @keyframes gradientMove {
@@ -74,7 +76,7 @@ section {
 
 
 .card-section {
-  @apply flex flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-amber-500 hover:font-bold;
+  @apply flex flex-1 flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-amber-500 hover:font-bold;
  
 }
 

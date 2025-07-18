@@ -45,9 +45,9 @@ const projects: ProjectCardType[] = [
 
 export const ProjectSection = () => {
   return (
-    <fieldset className="card-section   gap-4 border text-xl ">
+    <fieldset className="card-section border   gap-4  text-xl flex flex-1 flex-wrap ">
       <legend className="font-semibold">Project Experience</legend>
-      <div className="text-black font-normal flex gap-2 flex-col text-base ">
+      <div className="text-black font-normal flex flex-1 gap-2 flex-col text-base border  ">
         {projects.map((item: ProjectCardType) => (
           <ProjectCardComponent key={item.id} item={item} />
         ))}
@@ -59,11 +59,11 @@ export const ProjectSection = () => {
 const ProjectCardComponent = (prop: { item: ProjectCardType }) => {
   const { item } = prop;
   return (
-    <div className="flex flex-col border border-gray-300 rounded-lg p-4 gap-2 bg-white">
-      <div>{item.projectName}</div>
-      <div>{item.description}</div>
-      <div className="flex flex-1 overflow-hidden">
-        <img src={item.imgUrl} alt={item.projectName} />
+    <div className="flex flex-1  flex-col border border-gray-300 rounded-lg p-4 gap-2 bg-white">
+      <div className="flex">{item.projectName}</div>
+      <div className="flex">{item.description}</div>
+      <div className="flex  overflow-hidden">
+        <img src={item.imgUrl} alt={item.projectName}  />
       </div>
       <div className="flex justify-between ">
         <div className="flex gap-2">
