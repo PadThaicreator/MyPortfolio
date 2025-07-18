@@ -1,30 +1,30 @@
-import axios from "axios";
+// import axios from "axios";
 import { Facebook, Github, Instagram } from "lucide-react";
-import { useState } from "react";
+// import { useState } from "react";
 
 export const ContactSection = () => {
-  const [subject, setSubject] = useState<string>("");
-  const [email, setEmail] = useState<string>("");
-  const [message, setMessage] = useState<string>("");
-  const [isSubmit , setIsSubmit] = useState<boolean>(false);
-  const apiUrl = import.meta.env.VITE_API_URL;
+  // const [subject, setSubject] = useState<string>("");
+  // const [email, setEmail] = useState<string>("");
+  // const [message, setMessage] = useState<string>("");
+  // const [isSubmit , setIsSubmit] = useState<boolean>(false);
+  // const apiUrl = import.meta.env.VITE_API_URL;
 
-  const handleSendEmail = async () => {
-    if (!subject || !email || !message) {
-      return;
-    }
-    setIsSubmit(true)
-    const payload = {
-      subject: subject,
-      email: email,
-      message: message,
-    };
+  // const handleSendEmail = async () => {
+  //   if (!subject || !email || !message) {
+  //     return;
+  //   }
+  //   setIsSubmit(true)
+  //   const payload = {
+  //     subject: subject,
+  //     email: email,
+  //     message: message,
+  //   };
 
-    const res = await axios.post(`${apiUrl}/mail/contactMe`, payload);
-    if(res){
-      setIsSubmit(false)
-    }
-  };
+  //   const res = await axios.post(`${apiUrl}/mail/contactMe`, payload);
+  //   if(res){
+  //     setIsSubmit(false)
+  //   }
+  // };
 
   return (
     <div className="flex flex-col p-4 rounded-lg    gap-4 winky-sans">
@@ -51,7 +51,7 @@ export const ContactSection = () => {
           </div>
         </div>
       </fieldset>
-      <fieldset className="card-section   rounded-md border p-2 text-black font-normal  gap-2">
+      {/* <fieldset className="card-section   rounded-md border p-2 text-black font-normal  gap-2">
         <legend className="mx-auto font-semibold text-2xl">Contact Me</legend>
         <div className="flex  flex-col text-black gap-2">
           <div className="flex flex-1 flex-col gap-2">
@@ -92,7 +92,7 @@ export const ContactSection = () => {
             </div>
           </div>
         </div>
-      </fieldset>
+      </fieldset> */}
     </div>
   );
 };
