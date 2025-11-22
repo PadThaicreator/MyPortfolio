@@ -14,7 +14,7 @@ export const SkillSection = () => {
                     Thai(Native), English(semi-fluent reading and speaking)
                 </div>
                 <div>
-                    Programming  Languages    
+                    Programming Languages    
                 </div>
                 <div className="col-span-3">
                     C, Java,  Python, JavaScript, PHP

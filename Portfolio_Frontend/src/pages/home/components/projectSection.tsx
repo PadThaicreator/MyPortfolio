@@ -47,7 +47,7 @@ export const ProjectSection = () => {
   return (
     <fieldset className="card-section border   gap-4  text-xl flex flex-1 flex-wrap ">
       <legend className="font-semibold">Project Experience</legend>
-      <div className="text-black font-normal flex flex-1 gap-2 flex-col text-base border  ">
+      <div className="text-black font-normal flex flex-1 gap-2 flex-col text-base   ">
         {projects.map((item: ProjectCardType) => (
           <ProjectCardComponent key={item.id} item={item} />
         ))}
