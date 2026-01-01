@@ -41,7 +41,7 @@ const projects: ProjectCardType[] = [
     createdAt: "Jan - Mar 2025",
     gitHubUrl: "https://github.com/PrinTTer/SE_67_GROUP_8.git",
   },
-   {
+  {
     id: "4",
     projectName: "PEACE",
     description:
@@ -54,14 +54,18 @@ const projects: ProjectCardType[] = [
     createdAt: "Aug - Oct 2025",
     gitHubUrl: "https://github.com/PadThaicreator/Pattern_PEACE",
   },
-  
 ];
 
 export const ProjectSection = () => {
   return (
-    <fieldset className="card-section border   gap-4  text-xl flex flex-1 flex-wrap ">
+    <fieldset className="card-section border   gap-4  text-xl  ">
       <legend className="font-semibold">Project Experience</legend>
-      <div className="text-black font-normal flex flex-1 gap-2 flex-col text-base   ">
+      <div
+        className="text-black font-normal  grid
+  grid-cols-1
+  md:grid-cols-2
+  gap-4 text-base   "
+      >
         {projects.map((item: ProjectCardType) => (
           <ProjectCardComponent key={item.id} item={item} />
         ))}
@@ -73,32 +77,49 @@ export const ProjectSection = () => {
 const ProjectCardComponent = (prop: { item: ProjectCardType }) => {
   const { item } = prop;
   return (
-    <div className="flex flex-1  flex-col border border-gray-300 rounded-lg p-4 gap-2 bg-white">
-      <strong className="flex">{item.projectName}</strong>
-      <div className="flex">{item.description}</div>
-      <div className="flex  overflow-hidden">
-        <img src={item.imgUrl} alt={item.projectName}  />
+    <div
+      className="
+  flex flex-col md:flex-row
+  border border-gray-300
+  rounded-lg
+  p-4
+  gap-4
+  bg-white
+"
+    >
+      <div
+        className="
+  w-full
+  md:w-1/3
+  overflow-hidden
+  rounded-md
+"
+      >
+        <img
+          src={item.imgUrl}
+          alt={item.projectName}
+          className="w-full h-full object-cover"
+        />
       </div>
-      <div className="flex justify-between ">
-        <div className="flex gap-2">
-          {/* {item.webUrl && (
-            <a href={item.webUrl} target="_blank">
-              <Globe className="bg-gray-200 rounded-full p-2" size={36} />
-            </a>
-          )} */}
+      <div className="flex flex-col flex-1 gap-2">
+        <strong className="text-lg">{item.projectName}</strong>
+        <p className="text-sm text-gray-700">{item.description}</p>
+
+        <div className="flex justify-between items-center flex-wrap gap-2 mt-auto">
           <a href={item.gitHubUrl} target="_blank">
             <Github className="bg-gray-200 rounded-full p-2" size={36} />
           </a>
-        </div>
-        <div className="flex gap-4">
-          {item?.tool.map((i: string, index: number) => (
-            <div
-              key={index}
-              className="bg-amber-200 rounded-full p-2 px-4 text-xs opacity-70"
-            >
-              {i}
-            </div>
-          ))}
+
+          <div className="flex gap-2 flex-wrap">
+            {item.tool.map((i, index) => (
+              <span
+                key={index}
+                className="bg-amber-200 rounded-full px-3 py-1 text-xs opacity-70"
+              >
+                {i}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
     </div>

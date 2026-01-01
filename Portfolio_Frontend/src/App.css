@@ -77,8 +77,9 @@ section {
 
 
 .card-section {
-  @apply flex flex-1 flex-col p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-amber-500 hover:font-bold;
- 
+  @apply  p-4 rounded-lg hover:shadow-lg duration-300 bg-white hover:text-amber-500 hover:font-bold;
+ display: flex;
+ max-width: 80vw;
 }
 
 

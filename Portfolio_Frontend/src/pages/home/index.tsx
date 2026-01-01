@@ -11,7 +11,7 @@ export default function Home() {
         <section id="about" className="section col-span-2">
           <AboutMePage />
         </section>
-        <section id="ed" className="section flex col-span-2 justify-end">
+        <section id="ed" className="section flex col-span-2 ">
           <EducationSection />
         </section>
         <section id="skill" className="section col-span-2">
