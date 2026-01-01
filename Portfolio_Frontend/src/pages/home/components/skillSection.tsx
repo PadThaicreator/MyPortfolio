@@ -29,31 +29,31 @@ export const SkillSection = () => {
                     Database                             
                 </div>
                 <div className="col-span-3">
-                    MySQL, MongoDB
+                    MySQL, MongoDB, Oracle / PL/SQL 
                 </div>
                 <div>
-                    Framework
+                    Frameworks & Libraries
                 </div>
                 <div className="col-span-3">
-                    Laravel, React, React Native, Next.js, Express.js, TailwindCSS
+                    Laravel, React.js, React Native, Angular.js, Next.js, Express.js, TailwindCSS
                 </div>
                 <div>
-                    Tool
+                    Tools & Platforms
                 </div>
                 <div className="col-span-3">
                     Node.js, Vite.js, Figma,  Git, Github
                 </div>
             </div>
-            <div className="flex flex-wrap gap-4 items-center justify-center mt-3">
-                <img src="/vite.svg" alt=""  className="w-8 h-8"/>
+            <div className="flex flex-wrap gap-6 items-center justify-center mt-3">
+                {/* <img src="/vite.svg" alt=""  className="w-8 h-8"/> */}
                 <img src="/react.svg" alt="" className="w-8 h-8" />
                 <img src="/laravel-svgrepo-com.svg" alt=""  className="w-8 h-8" />
                 <img src="/nextjs-fill-svgrepo-com.svg" alt=""  className="w-8 h-8" />
                 <img src="/nodejs-icon-svgrepo-com.svg" alt=""  className="w-8 h-8" />
                 <img src="/mysql-logo-svgrepo-com.svg" alt=""  className="w-8 h-8" />
                 <img src="/mongodb-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="/git-svgrepo-com.svg" alt=""  className="w-8 h-8" />
-                <img src="/github-142-svgrepo-com.svg" alt=""  className="w-8 h-8" />
+                {/* <img src="/git-svgrepo-com.svg" alt=""  className="w-8 h-8" /> */}
+                {/* <img src="/github-142-svgrepo-com.svg" alt=""  className="w-8 h-8" /> */}
             </div>
         </fieldset>
     );

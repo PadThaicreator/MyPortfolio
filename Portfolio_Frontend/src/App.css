@@ -4,7 +4,7 @@
    display: flex;
    flex : 1;
   flex-direction: column;
-  background: linear-gradient(-45deg, #cd4ff0, #e399f7, #c920f8, #cd4ff0);
+
   background-size: 400% 400%;
   animation: gradientMove 10s ease infinite;
   height: fit-content;
@@ -34,19 +34,20 @@ section {
 .rainbow-text {
   font-size: 3rem;
   font-weight: bold;
-  
+/*   
   background: linear-gradient(
     270deg,
     #0000,
     #444145,
     #837f85,
     #a7a2a8
-  );
+  ); */
+  background-color: rgb(255, 255, 255);
   background-size: 400% 400%;
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: rainbow 6s ease infinite;
+  /* animation: rainbow 6s ease infinite; */
 }
 
 .winky-sans {
