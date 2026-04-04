@@ -7,12 +7,12 @@ const Layout = () => {
   const [isSelected, setSelected] = useState<string>("");
 
   return (
-    <div className="grid md:grid-cols-2 sm:grid-cols-1 bg-blue-300    ">
+    <div className="grid md:grid-cols-2 sm:grid-cols-1 bg-blue-300">
       <div>
-        <nav className="flex flex-1   flex-col items-center justify-center gap-10  p-4 h-screen top-0 sticky z-10 text-white">
+        <nav className="flex flex-1 flex-col items-center justify-center gap-10 p-4 h-screen top-0 sticky z-10 text-white">
           <HomeSection />
 
-          <div className="flex gap-4">
+          <div className="flex gap-4 flex-wrap justify-center">
             <a
               href="#about"
               className={` ${isSelected == "about" ? " selectNav" : ""} p-2`}
@@ -26,6 +26,13 @@ const Layout = () => {
               onClick={() => setSelected("ed")}
             >
               Education
+            </a>
+            <a
+              href="#intern"
+              className={` ${isSelected == "intern" ? "  selectNav" : ""} p-2`}
+              onClick={() => setSelected("intern")}
+            >
+              Intership
             </a>
             <a
               href="#skill"
@@ -69,7 +76,7 @@ const Layout = () => {
         </nav>
       </div>
 
-      <main  className="flex flex-1 flex-wrap  flex-col z-50 p-4">
+      <main className="flex flex-1 flex-wrap  flex-col z-50 p-4">
         <Outlet />
       </main>
     </div>

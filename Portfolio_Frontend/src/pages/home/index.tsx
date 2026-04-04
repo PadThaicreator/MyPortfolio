@@ -1,31 +1,35 @@
 import { AboutMePage } from "./components/aboutMeSection";
 import { ContactSection } from "./components/contactSection";
 import { EducationSection } from "./components/educationSection";
+import { IntershipSection } from "./components/intershipSection";
 import { ProjectSection } from "./components/projectSection";
 import { SkillSection } from "./components/skillSection";
 
 export default function Home() {
   return (
     <div>
-      <div className="grid grid-cols-2 gap-10 winky-sans">
-        <section id="about" className="section col-span-2">
+      <div className="flex flex-col gap-10 winky-sans">
+        <section id="about" className="section">
           <AboutMePage />
         </section>
-        <section id="ed" className="section flex col-span-2 ">
+        <section id="ed" className="section">
           <EducationSection />
         </section>
-        <section id="skill" className="section col-span-2">
+        <section id="intern" className="section">
+          <IntershipSection />
+        </section>
+        <section id="skill" className="section">
           <SkillSection />
         </section>
-        <section id="exp" className="section col-span-2">
+        <section id="exp" className="section">
           <ProjectSection />
         </section>
 
-        <section id="contact" className="section col-span-2">
+        <section id="contact" className="section">
           <ContactSection />
         </section>
       </div>
-      
+
     </div>
   );
 }
