@@ -54,6 +54,19 @@ const projects: ProjectCardType[] = [
     createdAt: "Aug - Oct 2025",
     gitHubUrl: "https://github.com/PadThaicreator/Pattern_PEACE",
   },
+  {
+    id: "5",
+    projectName: "Bank System",
+    description:
+      "Collaborated in a team to design and develop a full-stack banking and investment system.",
+    webUrl: "",
+    imgUrl:
+      "https://res.cloudinary.com/dlsd9groz/image/upload/v1776010390/Screenshot_2026-04-12_231121_wj1l2i.png",
+    tool: ["React.js", "Spring Boot", "PostgreSQL"],
+    status: "active",
+    createdAt: "March - April 2026",
+    gitHubUrl: "https://github.com/PadThaicreator/bank-system.git",
+  },
 ];
 
 export const ProjectSection = () => {
