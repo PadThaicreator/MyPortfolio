@@ -1,53 +1,73 @@
 const education = [
   {
-    id: 1,
-    place: "Kasetsart University, Kamphaeng Saen Campus",
-    toYear: "Present",
-    fromYear: "June 2022",
-    type: "University",
-    program: "B.Eng. in Computer Engineering Kasertsart University(KU), Kamphaensaen",
-    gpa: 3.64
+    school: "Kasetsart University, Kamphaeng Saen Campus",
+    degree: "B.Eng. in Computer Engineering",
+    period: "June 2022 - March 2026",
+    gpa: 3.64,
+    honor: "First-Class Honors",
   },
   {
-    id: 2,
-    place: "Thawaranukul School",
-    toYear: "March 2022",
-    fromYear: "May 2016",
-    type: "High School",
-    program: "Sci-Math (SMTE)",
-    gpa: 3.92
+    school: "Thawaranukul School",
+    degree: "Sci-Math (SMTE)",
+    period: "May 2016 - March 2022",
+    gpa: 3.92,
+    honor: null,
   },
 ];
 
-export const EducationSection = () => {
+type Entry = (typeof education)[number];
+
+const Line = ({
+  k,
+  value,
+  type,
+  comma = true,
+}: {
+  k: string;
+  value: string | number | null;
+  type: "str" | "num";
+  comma?: boolean;
+}) => (
+  <div className="pl-8">
+    <span className="tok-str">"{k}"</span>
+    <span className="tok-punc">: </span>
+    {value === null ? (
+      <span className="tok-bool">null</span>
+    ) : type === "num" ? (
+      <span className="tok-num">{value}</span>
+    ) : (
+      <span className="tok-str">"{value}"</span>
+    )}
+    {comma && <span className="tok-punc">,</span>}
+  </div>
+);
+
+export const EducationContent = () => {
   return (
-    <fieldset className="card-section border">
-      <legend className="ml-auto text-2xl font-semibold">Education</legend>
+    <div className="max-w-3xl">
+      <div className="mono text-xs text-gray-400 mb-4">
+        portfolio › education.json
+      </div>
 
-      <div className="text-black font-normal flex flex-col gap-3 flex-1">
-        {education.map((item) => (
-          <div key={item.id} className="flex flex-col  gap-4 md:gap-0 border  p-5 rounded-2xl hover:shadow-lg duration-300 border-gray-200">
-            <div className="flex items-center justify-between">
-              <div className="font-semibold md:font-normal text-gray-500 md:text-black">
-                {item.fromYear} - {item.toYear}
-              </div>
-              <div className="bg-amber-100 p-2 px-4 rounded-lg text-gray-600 self-start text-sm shadow-lg">{item.type}</div>
-
-            </div>
-            <div className="col-span-1 md:col-span-3">
-              <div className="flex flex-col md:flex-row flex-1 justify-between items-start md:items-center gap-2 md:gap-0">
-                <div className="flex flex-col">
-                  <div className="font-bold text-lg md:font-normal md:text-base">{item.place}</div>
-                  <div>{item.program} </div>
-                  <div>GPA : {item.gpa} </div>
-                </div>
-
-              </div>
-              <div></div>
-            </div>
+      <div className="ide-code">
+        <div className="tok-comment mb-2">// academic background</div>
+        <span className="tok-punc">[</span>
+        {education.map((item: Entry, i) => (
+          <div key={item.school} className="pl-4">
+            <span className="tok-punc">{"{"}</span>
+            <Line k="school" value={item.school} type="str" />
+            <Line k="degree" value={item.degree} type="str" />
+            <Line k="period" value={item.period} type="str" />
+            <Line k="gpa" value={item.gpa} type="num" />
+            {item.honor && <Line k="honor" value={item.honor} type="str" comma={false} />}
+            <span className="tok-punc">
+              {"}"}
+              {i < education.length - 1 ? "," : ""}
+            </span>
           </div>
         ))}
+        <span className="tok-punc">]</span>
       </div>
-    </fieldset>
+    </div>
   );
 };

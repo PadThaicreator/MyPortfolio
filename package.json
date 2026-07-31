@@ -2,7 +2,7 @@
   "name": "portfolio-frontend",
   "private": true,
   "version": "0.0.0",
-   "type": "module",
+  "type": "module",
   "ts-node": {
     "compilerOptions": {
       "module": "ESNext",
@@ -11,18 +11,14 @@
   },
   "scripts": {
     "dev": "vite",
-   
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-
     "dotenv": "^17.2.0",
-  
     "lucide-react": "^0.525.0",
-  
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
@@ -35,7 +31,6 @@
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
-
     "eslint": "^9.29.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
