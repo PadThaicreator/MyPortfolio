@@ -1,9 +1,9 @@
 const tags = [
   { label: "First-Class Honors", accent: true },
   { label: "GPA 3.64", accent: false },
-  { label: "AngularJS", accent: false },
-  { label: "Spring Boot", accent: false },
-  { label: "PL/SQL", accent: false },
+  { label: "Software Engineering ", accent: false },
+  { label: "System Analyst", accent: false },
+  { label: "Database Administrator", accent: false },
 ];
 
 export const AboutContent = () => {
