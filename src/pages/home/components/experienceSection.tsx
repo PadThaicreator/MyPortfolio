@@ -1,20 +1,19 @@
 const experiences = [
   {
     id: 1,
-    company: "Asia Sermkij Leasing PCL (ASK)",
+    company: "Asia Sermkij Leasing Public Company Limited",
     role: "Web Application Programmer",
     team: "Team Innovation",
     period: "May 2026 - Present",
     tag: "current",
     detail: [
-      "Develop and maintain internal web applications using AngularJS (frontend) and Spring Boot (backend).",
-      "Build and maintain PL/SQL stored procedures for data processing and business logic on Oracle Database.",
-      "Work with the Innovation team to research and build new internal tools.",
+      "Develop and maintain  web applications using AngularJS, ReactJs, Spring Boot, NodeJS",
+      "Work with the Innovation team.",
     ],
   },
   {
     id: 2,
-    company: "Asia Sermkij Leasing PCL (ASK)",
+    company: "Asia Sermkij Leasing Public Company Limited",
     role: "Web Application Programmer",
     team: "Internship",
     period: "November 2025 - March 2026",

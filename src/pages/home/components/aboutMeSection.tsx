@@ -16,9 +16,7 @@ export const AboutContent = () => {
       </h1>
 
       <p className="text-gray-500 mt-5 leading-relaxed">
-        Computer Engineering graduate (First-Class Honors, GPA 3.64) from
-        Kasetsart University, Kamphaeng Saen Campus. Currently a Web Application
-        Programmer at Asia Sermkij Leasing (ASK).
+        Computer Engineering graduate from Kasetsart University, Kamphaeng Saen Campus. Always learning and improving my technical skills.
       </p>
 
       <div className="flex gap-2 flex-wrap mt-6">
@@ -37,9 +35,8 @@ export const AboutContent = () => {
         {"<!-- a short intro -->"}
       </div> */}
       <p className="text-gray-600 mt-3 leading-relaxed">
-        Hi, I'm Poonnawit. I'm passionate  web
-        applications programmer and I'm always looking for ways to grow — both as a
-        developer and as a person.
+        Hi, I'm Poonnawit. I'm passionate about Software Engineering. 
+        I'm always looking for opportunities to learn, grow, and expand my skills as a Software Engineer, System Analyst, or Database Administrator.
       </p>
     </div>
   );
