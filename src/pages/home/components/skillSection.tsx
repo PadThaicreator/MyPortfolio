@@ -2,7 +2,7 @@ const skillGroups: { key: string; items: string[] }[] = [
   { key: "languages", items: ["Thai (Native)", "English (semi-fluent)"] },
   { key: "programming", items: ["C", "Java", "JavaScript"] },
   { key: "web", items: ["HTML", "CSS", "JavaScript"] },
-  { key: "database", items: ["MySQL", "MongoDB", "Oracle (PL/SQL)" , "PostgreSQL"] },
+  { key: "database", items: ["MySQL",  "Oracle (PL/SQL)" , "PostgreSQL"] },
   {
     key: "frameworks",
     items: [
